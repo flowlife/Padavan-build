@@ -2,15 +2,21 @@
 name: Build Padavan NEWIFI3
 
 on:
+
   repository_dispatch:
+
   workflow_dispatch:
 
-on: 
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
+    inputs:
+
+      ssh:
+
+        description: 'SSH connection to Actions'
+
+        required: false
+
+        default: 'false'
+        
   #  branches: 
   #    - master
 #  schedule:
